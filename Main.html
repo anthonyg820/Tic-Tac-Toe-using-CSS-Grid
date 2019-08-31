@@ -7,13 +7,43 @@
         <meta charset = "UTF-8">
         <meta name="viewport" content="width=device-width; initial-scale=1.0;">
         <link rel = "stylesheet" type = "text/css" href = "Main.css">
-        <script src = "#"></script>
+        <link href="https://fonts.googleapis.com/css?family=Gayathri&display=swap" rel="stylesheet">
+        <script src = "Main.js"></script>
 
     </head>
 
-    <body>
+    <body onload = "setGameDimensions()">
 
-        TEST
+        <div id = "ALLCONTENT">
+
+            <div id = "gameTitle">TIC TAC TOE</div>
+            <div id = "A1" class = "tttItem" onclick = "controller.activateCell('A1')"></div>
+            <div id = "A2" class = "tttItem" onclick = "controller.activateCell('A2')"></div>
+            <div id = "A3" class = "tttItem" onclick = "controller.activateCell('A3')"></div>
+            <div id = "B1" class = "tttItem" onclick = "controller.activateCell('B1')"></div>
+            <div id = "B2" class = "tttItem" onclick = "controller.activateCell('B2')"></div>
+            <div id = "B3" class = "tttItem" onclick = "controller.activateCell('B3')"></div>
+            <div id = "C1" class = "tttItem" onclick = "controller.activateCell('C1')"></div>
+            <div id = "C2" class = "tttItem" onclick = "controller.activateCell('C2')"></div>
+            <div id = "C3" class = "tttItem" onclick = "controller.activateCell('C3')"></div>
+
+        </div>
+
+        <div id = "playButton" onclick = "controller.startGame()">Play</div>
+        <div id = "turnDisplay">Your turn</div>
+
+        <!--The below div block the player from clicking the grid.-->
+        <div id = "ALLCONTENT_BLOCKER"></div>
+
+        <div id = "endOfGamePrompt">
+
+            <h3></h3> <!--Will say 'CONGRATULATIONS, YOU WON!' or 'OH NO, YOU LOST!'-->
+
+            <a id = "playAgainButton" href = "Main.html">Play again?</a>
+
+        </div>
+
+        <div id = "victoryBox"></div>
 
     </body>
 

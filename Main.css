@@ -1,0 +1,161 @@
+*{margin: 0px;
+    padding: 0px;}
+    
+header, nav, section, article, footer,aside, hgroup{display: block;}
+  
+#ALLCONTENT{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-areas:
+    'GameTitle GameTitle GameTitle'
+    'A1 A2 A3'
+    'B1 B2 B3'
+    'C1 C2 C3'
+    'space space space';
+    margin: auto;
+}
+
+#gameTitle{
+    grid-area: GameTitle;
+    align-self: center;
+    justify-self: center;
+    font-family: 'Gayathri', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    color: #444444;
+}
+
+.tttItem:hover{
+    cursor: pointer;
+    background: #e9e9e9;
+}
+
+#A1{
+    grid-area: A1;
+    border-bottom: 4px solid #444444;
+    border-right: 4px solid #444444;
+}
+#A2{
+    grid-area: A2;
+    border-bottom: 4px solid #444444;
+    border-right: 4px solid #444444;
+}
+#A3{
+    grid-area: A3;
+    border-bottom: 4px solid #444444;
+}
+#B1{
+    grid-area: B1;
+    border-bottom: 4px solid #444444;
+    border-right: 4px solid #444444;
+}
+#B2{
+    grid-area: B2;
+    border-bottom: 4px solid #444444;
+    border-right: 4px solid #444444;
+}
+#B3{
+    grid-area: B3;
+    border-bottom: 4px solid #444444;
+}
+#C1{
+    grid-area: C1;
+    border-right: 4px solid #444444;
+}
+#C2{
+    grid-area: C2;
+    border-right: 4px solid #444444;
+}
+#C3{
+    grid-area: C3;
+}
+
+#playButton{
+    background: rgb(2, 207, 235);
+    margin: auto;
+    padding: 25px 0;
+    text-align: center;
+    font-family: 'Gayathri', sans-serif;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+#playButton:hover{
+    background: rgb(1, 225, 255);
+}
+
+#turnDisplay{
+    background: rgb(235, 235, 235);
+    margin: auto;
+    padding: 25px 0;
+    text-align: center;
+    font-family: 'Gayathri', sans-serif;
+    font-size: 36px;
+    display: none;
+}
+
+#ALLCONTENT_BLOCKER{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 3;
+    display: none;
+}
+
+#endOfGamePrompt{
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    top: -100%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+    background: #e9e9e9;
+    color: #444444;
+    border: 4px solid rgb(1, 225, 255);
+    z-index: 5;
+    -webkit-transition: 1.0s;
+    -moz-transition: 1.0s;
+    -o-transition: 1.0s;
+    transition: 1.0s;
+}
+
+#endOfGamePrompt h3{
+    text-align: center;
+    font-family: 'Gayathri', sans-serif;
+    font-size: 24px;
+    margin: 50px 0 20px 0;
+}
+
+#playAgainButton{
+    display: block;
+    background: rgb(2, 207, 235);
+    color: #444444;
+    width: 200px; 
+    padding: 10px 0;
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Gayathri', sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+#playAgainButton:hover{
+    background: rgb(1, 225, 255);
+}
+
+#victoryBox{
+    background: url(Images/victory.png) no-repeat center;
+    background-size: contain;
+    position: fixed;
+    top: -2000px;
+    left: 0;
+    width: 100%;
+    height: 2000px;
+    z-index: 4;
+    -webkit-transition: 7s;
+    -moz-transition: 7s;
+    -o-transition: 7s;
+    transition: 7s;
+}
